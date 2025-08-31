@@ -24,7 +24,7 @@ async def predict_image(file: UploadFile = File(...)):
     results = model(input_path, save=True)
     
     # Find the output image in runs/detect/predict/
-    output_dir = Path("runs/detect/predict")
+    output_dir = Path("ultralytics/runs/detect/predict")
     if output_dir.exists():
         output_files = list(output_dir.glob("*.jpg")) + list(output_dir.glob("*.png"))
         
